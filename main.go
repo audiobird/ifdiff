@@ -70,5 +70,8 @@ func main() {
 	}
 	defer outFile.Close()
 
-	outFile.Write(in)
+	_, err = outFile.Write(in)
+	if err != nil {
+		cerr.Fatal(err)
+	}
 }
