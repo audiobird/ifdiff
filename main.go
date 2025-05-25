@@ -12,7 +12,7 @@ import (
 
 func parseFlags() {
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, `usage: ifdiff [IN FILE] [OUT FILE] 
+		fmt.Fprintln(os.Stderr, `usage: ifdiff [IN FILE] [OUT FILE] 
         Write [IN FILE] to [OUT FILE] if [OUT FILE] doesn't exist or if the content of [OUT FILE] != [IN FILE]
 
         With no [IN FILE], or when [IN FILE] is -, read standard input`)
